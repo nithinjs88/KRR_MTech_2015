@@ -1,0 +1,12 @@
+#If value of cell is fixed, then probable value is removed.
+sp {Sudoku*propose*remove_probable_if_value_fixed
+   (state <state> ^name Sudoku)
+   (<state> ^cell <cell>)
+   (<cell> ^row <row> ^col <col> ^value {<value> <> 0} ^probable <probable>)
+
+-->
+
+   (<state> ^operator <operator> + > =)
+   (<operator> ^name remove_probable ^cell <cell> ^probable <probable>)
+   (write (crlf) |remove_probable_if_value_fixed proposed for cell|<row>||<col>| and probable |<probable>| |)
+}

@@ -1,0 +1,16 @@
+sp {Sudoku*propose*row_rule
+   (state <s> ^name Sudoku ^cell <t1> ^cell {<t2> <> <t1>} ^counter <rc> )
+   (<t1> ^row <r> ^probable <p>)
+   (<t2> ^row <r> ^value <p>)
+   (<rc> ^row <r> ^digit <p> ^value <v>)
+-->
+   (<s> ^operator <op> + =)
+   (<op> ^name row_rule ^cell <t1> ^probable <p> ^counter <rc> ^value <v>)
+}
+sp {Sudoku*apply*row_rule
+   (state <s> ^operator <op>)
+   (<op> ^name row_rule ^cell <t1> ^probable <p> ^counter <rc> ^value <v>)
+-->
+   (<t1> ^probable <p> -)
+   (<rc> ^value (- <v> 1))
+}

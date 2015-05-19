@@ -1,0 +1,25 @@
+source _firstload.soar
+pushd all
+source all_source.soar
+popd
+pushd elaborations
+source elaborations_source.soar
+popd
+source column_rule.soar
+source grid_rule.soar
+source hidden_twin_column.soar
+source hidden_twin_grid.soar
+source hidden_twin_row.soar
+source initialize-Sudoku.soar
+source lonely_twin_col.soar
+source lonely_twin_grid.soar
+source lonely_twin_row.soar
+source one_probable_cell.soar
+source one_probable_col.soar
+source one_probable_grid.soar
+source one_probable_row.soar
+source remove_probable.soar
+source remove_probable_if_value_fixed.soar
+source row_rule.soar
+source subgroup_exclusion_column.soar
+source subgroup_exclusion_row.soar

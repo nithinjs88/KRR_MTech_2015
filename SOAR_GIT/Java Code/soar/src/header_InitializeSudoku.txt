@@ -1,0 +1,14 @@
+sp {Sudoku*propose*initialize-Sudoku
+   (state <state> ^superstate nil 
+             -^name)
+-->
+   (<state> ^operator <operator> + =)
+   (<operator> ^name initialize-Sudoku)
+}
+
+#To put bracket
+sp {Sudoku*apply*initialize-Sudoku
+   (state <state> ^operator <operator>)
+   (<operator> ^name initialize-Sudoku)
+-->
+   (<state> ^name Sudoku

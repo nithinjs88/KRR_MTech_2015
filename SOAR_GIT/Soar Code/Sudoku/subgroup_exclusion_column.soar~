@@ -1,0 +1,44 @@
+#If in a subgroup formed by a column(3 straight squares in a grid formed vertically) there are 2 unfilled cells and both
+#share the same probable and no other cell in the same column has the same probable, then this probable can be eliminated from other cells in the same grid.
+sp {Sudoku*propose*subgroup_exclusion_column_2_count
+   (state <state> ^name Sudoku)
+   (<state> ^cell <cell_grp_1> ^cell {<cell_grp_2> <> <cell_grp_1>})
+   #get the 2 cells in the same subgroup formed by column
+   (<cell_grp_1> ^col <col> ^grid <grid> ^value 0 ^probable <probable>)
+   (<cell_grp_2> ^col <col> ^grid <grid> ^value 0 ^probable <probable>)
+   (<state> ^counter <col_counter>)
+   #only the above two cells share the same probable in the same column
+   (<col_counter> ^col <col> ^digit <probable> ^count 2)
+   #get cell in the same grid having the same probable to be removed
+   (<state> ^cell {<cell_other> <> <cell_grp_1> <> <cell_grp_2>})
+   (<cell_other> ^grid <grid> ^value 0 ^probable <probable>)
+   
+-->
+   
+   (<state> ^operator <operator> + =)
+   (<operator> ^name remove_probable ^cell <cell_other> ^probable <probable>)
+   (write |subgroup_exclusion_column_2_count fired|)
+#  (halt)
+}
+
+#If in a subgroup formed by a column(3 straight squares in a grid formed vertically) there are 3 unfilled cells and all the three
+#share the same probable and no other cell in the same column has the same probable, then this probable can be eliminated from other cells in the same grid.
+sp {Sudoku*propose*subgroup_exclusion_row_3_count
+   (state <state> ^name Sudoku)
+   (<state> ^cell <cell_grp_1> ^cell {<cell_grp_2> <> <cell_grp_1>} ^cell {<cell_grp_3> <> <cell_grp_2> <> <cell_grp_1>})
+   #get the 2 cells in the same subgroup formed by row
+   (<cell_grp_1> ^col <col> ^grid <grid> ^value 0 ^probable <probable>)
+   (<cell_grp_2> ^col <col> ^grid <grid> ^value 0 ^probable <probable>)
+   (<cell_grp_3> ^col <col> ^grid <grid> ^value 0 ^probable <probable>)
+   (<state> ^counter <col_counter>)
+   #only the above three cells share the same probable in the same column
+   (<col_counter> ^col <col> ^digit <probable> ^count 3)
+   #get cell in the same grid having the same probable to be removed
+   (<state> ^cell {<cell_other> <> <cell_grp_1> <> <cell_grp_2> <> <cell_grp_3>})
+   (<cell_other> ^grid <grid> ^value 0 ^probable <probable>)
+
+-->
+   (<state> ^operator <operator> + =)
+   (<operator> ^name remove_probable ^cell <cell_other> ^probable <probable>)
+   (write |subgroup_exclusion_column_3_count fired|)
+}

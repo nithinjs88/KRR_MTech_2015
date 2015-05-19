@@ -1,0 +1,4 @@
+
+  (write (crlf) |Sudoku of dimension |<dimension>| read from file |<filename>| has been completely solved|)
+  (halt)
+}

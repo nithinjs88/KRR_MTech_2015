@@ -1,0 +1,14 @@
+sp {Sudoku*propose*cline
+   (state <s> ^name Sudoku ^cell <t1> ^cell {<t2> <> <t1>} ^cell {<t3> <> <t2>}{<t3> <> <t1>})
+   (<t1> ^grid <g> ^probable <p>)
+   (<t2> ^grid <g> ^probable <p>)
+-->
+   (<s> ^operator <op> + =)
+   (<op> ^name row_rule ^cell <t2> ^probable <p>)
+}
+sp {Sudoku*apply*row_rule
+   (state <s> ^operator <op>)
+   (<op> ^name row_rule ^cell <t2> ^probable <p>)
+-->
+   (<t2> ^probable <p> -)
+}

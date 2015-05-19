@@ -1,0 +1,14 @@
+digraph Output {
+638 [label="(not (Mortal Socrates))",color=red,penwidth = 2.0];
+629 [label="(or (not (Man ?X)) (Mortal ?X))",color=blue,penwidth = 2.0];
+650 [label="(not (Man Socrates))",color=red,penwidth = 2.0];
+629->650[label="{X=Socrates}"]
+638->650
+
+625 [label="(Man Socrates)",color=blue,penwidth = 2.0];
+0 [label="[]",color=red,penwidth = 2.0];
+625->0
+650->0
+
+
+}

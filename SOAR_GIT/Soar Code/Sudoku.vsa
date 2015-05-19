@@ -1,0 +1,26 @@
+VERSION 4
+/Sudoku/Sudoku.dm
+0	ROOT Sudoku Sudoku 1
+1	0	FOPERATOR _firstload _firstload.soar 2
+2	0	FOLDER all all 3
+3	0	FOLDER elaborations elaborations 4
+4	3	FOPERATOR print_Sudoku print_Sudoku.soar 5
+5	0	OPERATOR column_rule column_rule.soar 6
+6	0	OPERATOR grid_rule grid_rule.soar 7
+7	0	OPERATOR hidden_twin_column hidden_twin_column.soar 8
+8	0	OPERATOR hidden_twin_grid hidden_twin_grid.soar 9
+9	0	OPERATOR hidden_twin_row hidden_twin_row.soar 10
+10	0	OPERATOR initialize-Sudoku initialize-Sudoku.soar 11
+11	0	OPERATOR lonely_twin_col lonely_twin_col.soar 12
+12	0	OPERATOR lonely_twin_grid lonely_twin_grid.soar 13
+13	0	OPERATOR lonely_twin_row lonely_twin_row.soar 14
+14	0	OPERATOR one_probable_cell one_probable_cell.soar 15
+15	0	OPERATOR one_probable_col one_probable_col.soar 16
+16	0	OPERATOR one_probable_grid one_probable_grid.soar 17
+17	0	OPERATOR one_probable_row one_probable_row.soar 18
+18	0	OPERATOR remove_probable remove_probable.soar 19
+19	0	OPERATOR remove_probable_if_value_fixed remove_probable_if_value_fixed.soar 20
+20	0	OPERATOR row_rule row_rule.soar 21
+21	0	OPERATOR subgroup_exclusion_column subgroup_exclusion_column.soar 22
+22	0	OPERATOR subgroup_exclusion_row subgroup_exclusion_row.soar 23
+END

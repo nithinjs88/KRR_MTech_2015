@@ -1,0 +1,112 @@
+sp {Sudoku*monitor*state
+   (state <s> ^name Sudoku
+                ^cell <c11> ^cell <c12> ^cell <c13> ^cell <c14> ^cell <c15> ^cell <c16> ^cell <c17> ^cell <c18> ^cell <c19>
+                       ^cell <c21> ^cell <c22> ^cell <c23> ^cell <c24> ^cell <c25> ^cell <c26> ^cell <c27> ^cell <c28> ^cell <c29>
+                       ^cell <c31> ^cell <c32> ^cell <c33> ^cell <c34> ^cell <c35> ^cell <c36> ^cell <c37> ^cell <c38> ^cell <c39>
+                       ^cell <c41> ^cell <c42> ^cell <c43> ^cell <c44> ^cell <c45> ^cell <c46> ^cell <c47> ^cell <c48> ^cell <c49>
+                       ^cell <c51> ^cell <c52> ^cell <c53> ^cell <c54> ^cell <c55> ^cell <c56> ^cell <c57> ^cell <c58> ^cell <c59>
+                       ^cell <c61> ^cell <c62> ^cell <c63> ^cell <c64> ^cell <c65> ^cell <c66> ^cell <c67> ^cell <c68> ^cell <c69>
+                       ^cell <c71> ^cell <c72> ^cell <c73> ^cell <c74> ^cell <c75> ^cell <c76> ^cell <c77> ^cell <c78> ^cell <c79>
+                       ^cell <c81> ^cell <c82> ^cell <c83> ^cell <c84> ^cell <c85> ^cell <c86> ^cell <c87> ^cell <c88> ^cell <c89>
+                       ^cell <c91> ^cell <c92> ^cell <c93> ^cell <c94> ^cell <c95> ^cell <c96> ^cell <c97> ^cell <c98> ^cell <c99>)
+   (<c11> ^row 1 ^col 1 ^grid 1 ^value <v11>)
+   (<c12> ^row 1 ^col 2 ^grid 1 ^value <v12>  )
+   (<c13> ^row 1 ^col 3 ^grid 1 ^value <v13> )
+   (<c14> ^row 1 ^col 4 ^grid 2 ^value <v14>  )
+   (<c15> ^row 1 ^col 5 ^grid 2 ^value <v15> )
+   (<c16> ^row 1 ^col 6 ^grid 2 ^value <v16>  )
+   (<c17> ^row 1 ^col 7 ^grid 3 ^value <v17>  )
+   (<c18> ^row 1 ^col 8 ^grid 3 ^value <v18>  )
+   (<c19> ^row 1 ^col 9 ^grid 3 ^value <v19>  )
+   
+   (<c21> ^row 2 ^col 1 ^grid 1 ^value <v21>  )
+   (<c22> ^row 2 ^col 2 ^grid 1 ^value <v22>  )
+   (<c23> ^row 2 ^col 3 ^grid 1 ^value <v23>)
+   (<c24> ^row 2 ^col 4 ^grid 2 ^value <v24>  )
+   (<c25> ^row 2 ^col 5 ^grid 2 ^value <v25>  )
+   (<c26> ^row 2 ^col 6 ^grid 2 ^value <v26>  )
+   (<c27> ^row 2 ^col 7 ^grid 3 ^value <v27>  )
+   (<c28> ^row 2 ^col 8 ^grid 3 ^value <v28>  )
+   (<c29> ^row 2 ^col 9 ^grid 3 ^value <v29>  )
+   
+   (<c31> ^row 3 ^col 1 ^grid 1 ^value <v31>  )
+   (<c32> ^row 3 ^col 2 ^grid 1 ^value <v32>  )
+   (<c33> ^row 3 ^col 3 ^grid 1 ^value <v33>)
+   (<c34> ^row 3 ^col 4 ^grid 2 ^value <v34>  )
+   (<c35> ^row 3 ^col 5 ^grid 2 ^value <v35>  )
+   (<c36> ^row 3 ^col 6 ^grid 2 ^value <v36>  )
+   (<c37> ^row 3 ^col 7 ^grid 3 ^value <v37>  )
+   (<c38> ^row 3 ^col 8 ^grid 3 ^value <v38> )
+   (<c39> ^row 3 ^col 9 ^grid 3 ^value <v39> )
+   
+   (<c41> ^row 4 ^col 1 ^grid 4 ^value <v41>  )
+   (<c42> ^row 4 ^col 2 ^grid 4 ^value <v42>  )
+   (<c43> ^row 4 ^col 3 ^grid 4 ^value <v43>)
+   (<c44> ^row 4 ^col 4 ^grid 5 ^value <v44>  )
+   (<c45> ^row 4 ^col 5 ^grid 5 ^value <v45> )
+   (<c46> ^row 4 ^col 6 ^grid 5 ^value <v46> )
+   (<c47> ^row 4 ^col 7 ^grid 6 ^value <v47>  )
+   (<c48> ^row 4 ^col 8 ^grid 6 ^value <v48>  )
+   (<c49> ^row 4 ^col 9 ^grid 6 ^value <v49>  )
+   
+   (<c51> ^row 5 ^col 1 ^grid 4 ^value <v51>  )
+   (<c52> ^row 5 ^col 2 ^grid 4 ^value <v52>  )
+   (<c53> ^row 5 ^col 3 ^grid 4 ^value <v53> )
+   (<c54> ^row 5 ^col 4 ^grid 5 ^value <v54>  )
+   (<c55> ^row 5 ^col 5 ^grid 5 ^value <v55>  )
+   (<c56> ^row 5 ^col 6 ^grid 5 ^value <v56>  )
+   (<c57> ^row 5 ^col 7 ^grid 6 ^value <v57>  )
+   (<c58> ^row 5 ^col 8 ^grid 6 ^value <v58> )
+   (<c59> ^row 5 ^col 9 ^grid 6 ^value <v59>  )
+   
+   (<c61> ^row 6 ^col 1 ^grid 4 ^value <v61> )
+   (<c62> ^row 6 ^col 2 ^grid 4 ^value <v62>  )
+   (<c63> ^row 6 ^col 3 ^grid 4 ^value <v63>)
+   (<c64> ^row 6 ^col 4 ^grid 5 ^value <v64>  )
+   (<c65> ^row 6 ^col 5 ^grid 5 ^value <v65> )
+   (<c66> ^row 6 ^col 6 ^grid 5 ^value <v66>  )
+   (<c67> ^row 6 ^col 7 ^grid 6 ^value <v67>  )
+   (<c68> ^row 6 ^col 8 ^grid 6 ^value <v68>  )
+   (<c69> ^row 6 ^col 9 ^grid 6 ^value <v69>  )
+   
+   (<c71> ^row 7 ^col 1 ^grid 7 ^value <v71>  )
+   (<c72> ^row 7 ^col 2 ^grid 7 ^value <v72>  )
+   (<c73> ^row 7 ^col 3 ^grid 7 ^value <v73> )
+   (<c74> ^row 7 ^col 4 ^grid 8 ^value <v74>  )
+   (<c75> ^row 7 ^col 5 ^grid 8 ^value <v75>  )
+   (<c76> ^row 7 ^col 6 ^grid 8 ^value <v76>  )
+   (<c77> ^row 7 ^col 7 ^grid 9 ^value <v77>  )
+   (<c78> ^row 7 ^col 8 ^grid 9 ^value <v78> )
+   (<c79> ^row 7 ^col 9 ^grid 9 ^value <v79> )
+   
+   (<c81> ^row 8 ^col 1 ^grid 7 ^value <v81>  )
+   (<c82> ^row 8 ^col 2 ^grid 7 ^value <v82>  )
+   (<c83> ^row 8 ^col 3 ^grid 7 ^value <v83> )
+   (<c84> ^row 8 ^col 4 ^grid 8 ^value <v84>  )
+   (<c85> ^row 8 ^col 5 ^grid 8 ^value <v85>  )
+   (<c86> ^row 8 ^col 6 ^grid 8 ^value <v86>  )
+   (<c87> ^row 8 ^col 7 ^grid 9 ^value <v87>  )
+   (<c88> ^row 8 ^col 8 ^grid 9 ^value <v88>  )
+   (<c89> ^row 8 ^col 9 ^grid 9 ^value <v89>  )
+   
+   (<c91> ^row 9 ^col 1 ^grid 7 ^value <v91>  )
+   (<c92> ^row 9 ^col 2 ^grid 7 ^value <v92>   )
+   (<c93> ^row 9 ^col 3 ^grid 7 ^value <v93>  )
+   (<c94> ^row 9 ^col 4 ^grid 8 ^value <v94>  )
+   (<c95> ^row 9 ^col 5 ^grid 8 ^value <v95>  )
+   (<c96> ^row 9 ^col 6 ^grid 8 ^value <v96>  )
+   (<c97> ^row 9 ^col 7 ^grid 9 ^value <v97>  )
+   (<c98> ^row 9 ^col 8 ^grid 9 ^value <v98>  )
+   (<c99> ^row 9 ^col 9 ^grid 9 ^value <v99>  )
+   
+   -->
+   (write (crlf) | [| <v11> |,| <v12> |,| <v13> |,| <v14> |,| <v15> |,| <v16> |,| <v17> |,| <v18> |,| <v19> |]|)
+   (write (crlf) | [| <v21> |,| <v22> |,| <v23> |,| <v24> |,| <v25> |,| <v26> |,| <v27> |,| <v28> |,| <v29> |]|)
+   (write (crlf) | [| <v31> |,| <v32> |,| <v33> |,| <v34> |,| <v35> |,| <v36> |,| <v37> |,| <v38> |,| <v39> |]|)
+   (write (crlf) | [| <v41> |,| <v42> |,| <v43> |,| <v44> |,| <v45> |,| <v46> |,| <v47> |,| <v48> |,| <v49> |]|)
+   (write (crlf) | [| <v51> |,| <v52> |,| <v53> |,| <v54> |,| <v55> |,| <v56> |,| <v57> |,| <v58> |,| <v59> |]|)
+   (write (crlf) | [| <v61> |,| <v62> |,| <v63> |,| <v64> |,| <v65> |,| <v66> |,| <v67> |,| <v68> |,| <v69> |]|)
+   (write (crlf) | [| <v71> |,| <v72> |,| <v73> |,| <v74> |,| <v75> |,| <v76> |,| <v77> |,| <v78> |,| <v79> |]|)
+   (write (crlf) | [| <v81> |,| <v82> |,| <v83> |,| <v84> |,| <v85> |,| <v86> |,| <v87> |,| <v88> |,| <v89> |]|)
+   (write (crlf) | [| <v91> |,| <v92> |,| <v93> |,| <v94> |,| <v95> |,| <v96> |,| <v97> |,| <v98> |,| <v99> |]|)
+}

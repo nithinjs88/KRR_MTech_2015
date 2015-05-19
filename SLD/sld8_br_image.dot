@@ -1,0 +1,24 @@
+digraph Output {
+54 [label="(not (Girl Perl))",color=red,penwidth = 2.0];
+37 [label="(or (not (Child Perl)) (not (Female Perl)) (Girl Perl))",color=blue,penwidth = 2.0];
+102 [label="(or (not (Child Perl)) (not (Female Perl)))",color=red,penwidth = 2.0];
+37->102
+54->102
+
+6 [label="(or (not (Toddler Perl)) (Child Perl))",color=blue,penwidth = 2.0];
+152 [label="(or (not (Toddler Perl)) (not (Female Perl)))",color=red,penwidth = 2.0];
+6->152
+102->152
+
+2 [label="(Toddler Perl)",color=blue,penwidth = 2.0];
+176 [label="(not (Female Perl))",color=red,penwidth = 2.0];
+2->176
+152->176
+
+50 [label="(Female Perl)",color=blue,penwidth = 2.0];
+0 [label="[]",color=red,penwidth = 2.0];
+50->0
+176->0
+
+
+}

@@ -1,0 +1,23 @@
+#If count(no of probables for cell) is 1,fix the value of the cell
+sp {Sudoku*propose*one_probable_cell
+   (state <state> ^name Sudoku ^cell <cell>)
+   (<cell> ^value 0  ^probable <probable> ^count 1)
+
+-->
+   
+   (<state> ^operator <operator> + > =)
+   (<operator> ^name one_probable_cell ^cell <cell> ^probable <probable>)
+}
+
+sp {Sudoku*apply*one_probable_cell
+   (state <state> ^operator <operator>)
+   (<operator> ^name one_probable_cell ^cell <cell> ^probable <probable>)
+   (<cell> ^row <row> ^col <col>)
+
+-->
+   
+   (<cell> ^value 0 -)
+   (<cell> ^value <probable>)
+   #value fixed. So remove_probable_if_value_fixed will be called later.
+   (write (crlf) |one_probable_cell fired: value of cell|<row>||<col>| is |<probable>| |)
+}

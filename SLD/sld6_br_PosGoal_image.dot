@@ -1,0 +1,19 @@
+digraph Output {
+11 [label="(or (not (Student ?X)) (not (Lazy ?X)))",color=red,penwidth = 2.0];
+25 [label="(Lazy Sue)",color=blue,penwidth = 2.0];
+42 [label="(not (Student Sue))",color=red,penwidth = 2.0];
+25->42
+11->42[label="{X=Sue}"]
+
+2 [label="(or (not (GradStudent ?X)) (Student ?X))",color=blue,penwidth = 2.0];
+71 [label="(not (GradStudent Sue))",color=red,penwidth = 2.0];
+2->71[label="{X=Sue}"]
+42->71
+
+21 [label="(GradStudent Sue)",color=blue,penwidth = 2.0];
+0 [label="[]",color=red,penwidth = 2.0];
+21->0
+71->0
+
+
+}

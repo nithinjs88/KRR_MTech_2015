@@ -1,0 +1,30 @@
+#If a cell in a row has a probable and no other cell in the same row has that same probable(counter for that row and digit is 1)
+#then fix the value of the cell.
+sp {Sudoku*propose*one_probable_row
+   (state <state> ^name Sudoku)
+   (<state> ^cell <cell>)   
+   (<cell> ^row <row>  ^value 0 ^probable <probable>)
+   (<state> ^counter <row_counter>)
+   (<row_counter> ^row <row> ^digit <probable> ^count 1)
+
+-->
+
+   (<state> ^operator <operator> + < =)
+   (<operator> ^name one_probable_row ^cell <cell> ^probable <probable>)
+
+}
+
+sp {Sudoku*applyone_probable_row
+   (state <state> ^operator <operator>)
+   (<operator> ^name one_probable_row ^cell <cell> ^probable <probable>)
+
+   (<state> ^cell <cell>)
+   (<cell> ^row <row> ^col <col>  ^value 0 ^probable <probable>)
+
+   
+-->
+   
+   (<cell> ^value 0 -)
+   (<cell> ^value <probable>)
+   (write (crlf) |one_probable_row fired: value of cell|<row>||<col>| is |<probable>| |)
+}

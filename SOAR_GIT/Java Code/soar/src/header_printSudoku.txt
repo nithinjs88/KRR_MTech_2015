@@ -1,0 +1,4 @@
+#Rule fired when all values are fixed indicating sudoku has been completely solved.
+sp {Sudoku*final_state
+   (state <state> ^name Sudoku ^dimension <dimension> ^filename <filename>)
+  -(<state> ^cell.count <> 0)

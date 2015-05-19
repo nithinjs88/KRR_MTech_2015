@@ -1,0 +1,7 @@
+(Toddler Perl)
+(or (not (Toddler Perl))(Child Pel))
+(or (not (Child Perl)) (not (Male Perl))(Boy Perl))
+(or (not (Toddler Perl))(Infant Perl))
+(or (not (Child Perl)) (not (Female Perl))(Girl Perl))
+(Girl Perl)
+(not (Female Perl))

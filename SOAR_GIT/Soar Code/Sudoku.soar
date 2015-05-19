@@ -1,0 +1,3 @@
+pushd Sudoku
+source Sudoku_source.soar
+popd

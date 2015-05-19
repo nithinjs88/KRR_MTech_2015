@@ -1,0 +1,4 @@
+(or (not (GradStudent ?X))(Student ?X))
+(or (not (Student ?X))(not (Lazy ?X)))
+(GradStudent Sue)
+(Lazy Sue)

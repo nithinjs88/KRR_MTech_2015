@@ -1,0 +1,8 @@
+#Rule fired when all values are fixed indicating sudoku has been completely solved.
+sp {Sudoku*final_state
+   (state <state> ^name Sudoku)
+  -(<state> ^cell.count <> 0)
+-->
+   (write (crlf) |Sudoku has been completely solved|)
+   (halt)
+}

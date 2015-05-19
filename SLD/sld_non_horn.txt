@@ -1,0 +1,4 @@
+(Man Raju)
+(not (Man Sam))
+(not (Man Raju))
+(not (HardWorker Sue))

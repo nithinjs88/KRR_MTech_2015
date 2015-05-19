@@ -1,0 +1,18 @@
+sp {Sudoku*propose*one_probable
+   (state <s> ^name Sudoku ^cell <t> )
+   (<t> ^probable <p> ^grid <g> ^col <c> ^row <r>)
+  -(<t> ^probable <> <p> )
+-->
+   (<s> ^operator <op> + =)
+   (<op> ^name one_probable ^cell <t> ^probable <p> ^grid <g> ^col <c> ^row <r> )
+}
+sp {Sudoku*apply*one_probable
+   (state <s> ^operator <op>)
+   (<op> ^name one_probable ^cell <t> ^probable <p> ^grid <g> ^col <c> ^row <r> )
+-->
+   (<t> ^value <v> -)
+   (<t> ^value <p>)
+   (<t> ^probable <p> -)
+   (write (crlf) |one probable: grid: |<g>| Col: |<c>| row: |<r>| value: |<p>| |)
+   
+}

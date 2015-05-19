@@ -1,0 +1,7 @@
+sp{Sudoku*propose*adjust_counters
+   (state <s> ^name Sudoku ^cell <t>)
+   (<t> ^row <r> ^col <c> ^grid <g>)
+   (<t> -^value 0)
+-->
+   (<s> ^operator <op> + =)
+   (<op> ^name adjust_counters ^cell <t> 

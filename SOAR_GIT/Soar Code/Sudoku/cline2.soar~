@@ -1,0 +1,22 @@
+sp {Sudoku*propose*cline2
+   (state <s> ^name Sudoku ^cell <t1> ^cell {<t2> <> <t1>} ^cell {<t3> <> <t2> <> <t1>} ^cell {<t4> <> <t3> <> <t2> <> <t1>} ^cell {<t5> <> <t4> <> <t3> <> <t2> <> <t1>} ^cell {<t6> <> <t5> <> <t4> <> <t3> <> <t2> <> <t1>} ^cell {<t7> <> <t6> <> <t5> <> <t4> <> <t3> <> <t2> <> <t1>} ^cell {<t8> <> <t7> <> <t6> <> <t5> <> <t4> <> <t3> <> <t2> <> <t1>} ^cell {<t9> <> <t8> <> <t7> <> <t6> <> <t5> <> <t4> <> <t3> <> <t2> <> <t1>} ^cell {<t> <> <t1> <> <t2> <> <t3>})
+    (<t1> ^grid <g> ^col <c> ^probable <p>)
+    (<t2> ^grid <g> ^col <c> ^probable <p>)
+   -(<t3> ^grid <g> ^col <c> ^probable <> <p>)
+   -(<t4> ^grid <g> ^probable <> <p>)
+   -(<t5> ^grid <g> ^probable <> <p>)
+   -(<t6> ^grid <g> ^probable <> <p>)
+   -(<t7> ^grid <g> ^probable <> <p>)
+   -(<t8> ^grid <g> ^probable <> <p>)
+   -(<t9> ^grid <g> ^probable <> <p>) 
+    (<t> ^col <c> ^probable <p>)
+-->
+   (<s> ^operator <op> + =)
+   (<op> ^name cline2 ^cell <t> ^col <c> ^probable <p>)
+}
+sp {Sudoku*apply*cline2
+   (state <s> ^operator <op>)
+   (<op> ^name cline2 ^cell <t> ^col <c> ^probable <p>)
+-->
+   (<t> ^probable <p> -)
+}

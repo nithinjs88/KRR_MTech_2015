@@ -1,0 +1,2 @@
+(not (Man Raju))
+(not (Man Raju))

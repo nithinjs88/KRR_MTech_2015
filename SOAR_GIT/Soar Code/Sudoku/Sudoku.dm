@@ -1,0 +1,224 @@
+111
+SOAR_ID 0
+SOAR_ID 1
+SOAR_ID 2
+SOAR_ID 3
+SOAR_ID 4
+ENUMERATION 5 1 state
+ENUMERATION 6 1 nil
+ENUMERATION 7 1 Sudoku
+ENUMERATION 8 1 initialize-Sudoku
+SOAR_ID 9
+ENUMERATION 10 1 row_rule
+SOAR_ID 11
+SOAR_ID 12
+SOAR_ID 13
+SOAR_ID 14
+ENUMERATION 15 1 row_rule
+SOAR_ID 16
+ENUMERATION 17 1 row_rule
+SOAR_ID 18
+ENUMERATION 19 1 column_rule
+SOAR_ID 20
+ENUMERATION 21 1 grid_rule
+SOAR_ID 22
+ENUMERATION 23 1 one_probable
+SOAR_ID 24
+ENUMERATION 25 1 cline3
+SOAR_ID 26
+SOAR_ID 27
+ENUMERATION 28 1 cline3
+SOAR_ID 29
+ENUMERATION 30 1 cline2
+SOAR_ID 31
+ENUMERATION 32 1 cline2
+SOAR_ID 33
+ENUMERATION 34 1 rline2
+SOAR_ID 35
+ENUMERATION 36 1 cline2
+SOAR_ID 37
+ENUMERATION 38 1 adjust_counters
+SOAR_ID 39
+ENUMERATION 40 1 adjust_counter
+SOAR_ID 41
+ENUMERATION 42 1 remove_probable
+SOAR_ID 43
+ENUMERATION 44 1 remove_probable
+SOAR_ID 45
+ENUMERATION 46 1 one_probable_cell
+SOAR_ID 47
+INTEGER_RANGE 48 -2147483648 2147483647
+INTEGER_RANGE 49 -2147483648 2147483647
+INTEGER_RANGE 50 -2147483648 2147483647
+INTEGER_RANGE 51 -2147483648 2147483647
+INTEGER_RANGE 52 -2147483648 2147483647
+SOAR_ID 53
+ENUMERATION 54 1 fix_value_cell
+INTEGER_RANGE 55 -2147483648 2147483647
+INTEGER_RANGE 56 -2147483648 2147483647
+SOAR_ID 57
+SOAR_ID 58
+SOAR_ID 59
+ENUMERATION 60 1 one_probable_row
+SOAR_ID 61
+ENUMERATION 62 1 one_probable_col
+SOAR_ID 63
+ENUMERATION 64 1 one_probable_grid
+SOAR_ID 65
+ENUMERATION 66 1 remove_probable_if_value_fixed
+SOAR_ID 67
+ENUMERATION 68 1 remove_probable
+SOAR_ID 69
+SOAR_ID 70
+ENUMERATION 71 1 row_rule
+SOAR_ID 72
+ENUMERATION 73 1 column_rule
+SOAR_ID 74
+ENUMERATION 75 1 grid_rule
+INTEGER_RANGE 76 -2147483648 2147483647
+SOAR_ID 77
+ENUMERATION 78 1 lonely_twin_row
+ENUMERATION 79 1 <cell_twin_1
+SOAR_ID 80
+INTEGER_RANGE 81 -2147483648 2147483647
+SOAR_ID 82
+INTEGER_RANGE 83 -2147483648 2147483647
+SOAR_ID 84
+SOAR_ID 85
+SOAR_ID 86
+INTEGER_RANGE 87 -2147483648 2147483647
+INTEGER_RANGE 88 -2147483648 2147483647
+INTEGER_RANGE 89 -2147483648 2147483647
+INTEGER_RANGE 90 -2147483648 2147483647
+INTEGER_RANGE 91 -2147483648 2147483647
+INTEGER_RANGE 92 -2147483648 2147483647
+INTEGER_RANGE 93 -2147483648 2147483647
+INTEGER_RANGE 94 -2147483648 2147483647
+SOAR_ID 95
+ENUMERATION 96 1 lonely_twin_col
+SOAR_ID 97
+ENUMERATION 98 1 lonely_twin_grid
+SOAR_ID 99
+ENUMERATION 100 1 subgroup_exclusion_row
+SOAR_ID 101
+ENUMERATION 102 1 subgroup_exclusion_column
+SOAR_ID 103
+ENUMERATION 104 1 hidden_twin_row
+SOAR_ID 105
+ENUMERATION 106 1 hidden_twin_column
+SOAR_ID 107
+ENUMERATION 108 1 hidden_twin_grid
+ENUMERATION 109 3 9x9expert test1 test4
+ENUMERATION 110 2 9X9 9x9
+111
+0 cell 79
+0 cell 80
+0 count 76
+0 counter 47
+0 dimension 110
+0 filename 109
+0 io 1
+0 name 7
+0 operator 4
+0 operator 9
+0 operator 14
+0 operator 16
+0 operator 18
+0 operator 20
+0 operator 22
+0 operator 24
+0 operator 27
+0 operator 29
+0 operator 31
+0 operator 33
+0 operator 35
+0 operator 37
+0 operator 39
+0 operator 41
+0 operator 43
+0 operator 45
+0 operator 53
+0 operator 59
+0 operator 61
+0 operator 63
+0 operator 65
+0 operator 67
+0 operator 70
+0 operator 72
+0 operator 74
+0 operator 77
+0 operator 95
+0 operator 97
+0 operator 99
+0 operator 101
+0 operator 103
+0 operator 105
+0 operator 107
+0 superstate 6
+0 top-state 0
+0 type 5
+1 input-link 2
+1 output-link 3
+4 cell 11
+4 name 8
+4 probable 12
+9 name 10
+11 col 58
+11 count 56
+11 grid 69
+11 probable 13
+11 row 57
+11 value 26
+11 value 55
+14 name 15
+16 name 17
+18 name 19
+20 name 21
+22 name 23
+24 name 25
+27 name 28
+29 name 30
+31 name 32
+33 name 34
+35 name 36
+37 name 38
+39 name 40
+41 name 42
+43 name 44
+45 name 46
+47 col 51
+47 count 50
+47 digit 49
+47 grid 52
+47 row 48
+53 name 54
+59 name 60
+61 name 62
+63 name 64
+65 name 66
+67 name 68
+70 name 71
+72 name 73
+74 name 75
+77 name 78
+80 col 84
+80 col 89
+80 col 90
+80 count 83
+80 grid 85
+80 grid 91
+80 grid 92
+80 probable 82
+80 probable 93
+80 probable 94
+80 row 86
+80 row 87
+80 row 88
+80 value 81
+95 name 96
+97 name 98
+99 name 100
+101 name 102
+103 name 104
+105 name 106
+107 name 108

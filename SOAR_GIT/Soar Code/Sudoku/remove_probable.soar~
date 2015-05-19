@@ -1,0 +1,26 @@
+#This operator removes a probable for a cell, and corresponding cell attributes and row/col/grid counters are changed.
+sp {Sudoku-Solver*apply*remove_probable
+   (state <state> ^operator <operator>)
+   (<operator> ^name remove_probable ^cell <cell> ^probable <probable>)
+   (<cell> ^row <row> ^col <col> ^grid <grid> ^count <count>)
+   #get counters
+   (<state> ^counter <row_counter> ^counter <col_counter> ^counter <grid_counter>)
+   (<row_counter>  ^row <row>   ^digit <probable> ^count <row_counter_value>)
+   (<col_counter>  ^col <col> ^digit <probable> ^count <col_counter_value>)
+   (<grid_counter> ^grid <grid>  ^digit <probable> ^count <grid_counter_value>)
+
+-->
+   
+   #update cell attributes
+   (<cell> ^probable <probable> -)
+   (<cell> ^count <count> -)
+   (<cell> ^count (- <count> 1) )
+   #update row/col/grid counters
+   (<row_counter>  ^count  <row_counter_value> -  )
+   (<row_counter>  ^count  ( - <row_counter_value> 1) )
+   (<col_counter>  ^count  <col_counter_value> -  )
+   (<col_counter>  ^count  ( - <col_counter_value> 1) )
+   (<grid_counter> ^count  <grid_counter_value> -  )
+   (<grid_counter> ^count  ( - <grid_counter_value> 1) )
+   (write |remove_probable fired for cell|<row>||<col>| and removed probable |<probable>| |)
+}

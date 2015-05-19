@@ -1,0 +1,3 @@
+Q7. Implement the Unification algorithm. For a given set of formulas in clause
+form, implement SLD resolution method and display the derivation DAGs in
+graphical form.

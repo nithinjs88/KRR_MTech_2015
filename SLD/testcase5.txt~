@@ -1,0 +1,2 @@
+(not (sees ?X ?X))
+(not (sees Raju (feet ?Y)))

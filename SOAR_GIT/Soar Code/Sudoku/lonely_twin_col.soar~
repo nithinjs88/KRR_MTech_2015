@@ -1,0 +1,17 @@
+#If two cells in the same column have the same two probables and no other probables, and another cell in the same column has a common probable
+#then the probable value can be removed from the later cell.
+sp {Sudoku*propose*lonely_twin_col
+   (state <state> ^name Sudoku)
+   (<state> ^cell <cell_twin_1> ^cell {<cell_twin_2> <> <cell_twin_1>} ^cell {<cell3> <> <cell_twin_2> <> <cell_twin_1>})
+   #get the twins having the same probable
+   (<cell_twin_1> ^col <col> ^count 2 ^probable <probable1> ^probable {<probable2> <> <probable1>})
+   (<cell_twin_2> ^col <col> ^count 2 ^probable <probable1> ^probable <probable2>)
+   #get the cell to remove the probable
+   (<cell3> ^col <col> ^value 0 ^probable <probable1> )
+   
+-->
+    
+   (<state> ^operator <operator> + > =)
+   (<operator> ^name remove_probable ^cell <cell3> ^probable <probable1>)
+   (write (crlf) |lonely_twin_col rule proposed for column |<col>||)
+}

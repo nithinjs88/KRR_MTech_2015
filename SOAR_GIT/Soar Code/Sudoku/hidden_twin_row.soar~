@@ -1,0 +1,22 @@
+#If two cells in the same row have the same two probables, and no other cell in the same row has both of the two probables
+#then the other probables in the first two cells can be removed.
+sp {Sudoku*propose*hidden_twin_row
+   (state <state> ^name Sudoku)
+   (<state> ^cell <cell_twin_1> ^cell {<cell_twin_2> <> <cell_twin_1>})
+   #get twins with same 2 probables
+   (<cell_twin_1> ^row <row> ^value 0 ^count > 2 ^probable <probable1> ^probable {<probable2> <> <probable1>})
+   (<cell_twin_2> ^row <row> ^value 0 ^probable <probable1> ^probable <probable2>)
+   #get the row counters for probable1 and probable2
+   (<state> ^counter <row_counter_probable_1> ^counter {<row_counter_probable_2> <> <row_counter_probable_1>})
+   #only the above two cells share the same probable in the same row
+   (<row_counter_probable_1> ^row <row> ^digit <probable1> ^count 2)
+   (<row_counter_probable_2> ^row <row> ^digit <probable2> ^count 2)
+   #get the probable to be removed
+   (<cell_twin_1> ^probable {<probable_remove> <> <probable2> <> <probable1>})
+   
+-->
+   
+   (<state> ^operator <operator> + < =)
+   (<operator> ^name remove_probable ^cell <cell_twin_1> ^probable <probable_remove>)
+   (write (crlf) |hidden twin rule proposed for row |<row>||)
+}

@@ -1,0 +1,3 @@
+(or (not (Man ?X))(Mortal ?X))
+(Man Socrates)
+(not (Mortal Socrates))

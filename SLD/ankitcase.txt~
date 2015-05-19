@@ -1,0 +1,5 @@
+(F ?X (H ?X) ?Y)
+(F (G ?Z) ?V ?Z)
+
+(or (Man  ?X ) (Woman ?X))
+(or (Man (Friend Raju)) (Woman (Friend Raju)))

@@ -1,0 +1,3 @@
+(or (not (Man ?X))(Woman ?X))
+(not (Man Raju))
+(not (Woman Raju))

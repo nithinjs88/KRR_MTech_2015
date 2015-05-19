@@ -1,0 +1,2 @@
+(or (Man (Friend ?X) ) (Woman (Friend ?X)))
+(or (Man Raju) (Woman Raju))
